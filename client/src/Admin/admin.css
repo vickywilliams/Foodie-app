@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #505050;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Admin Container */
+  .admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Titles */
+  .admin-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #00d4ff;
+    color: #1e1e1e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #1e1e1e;
+    color: #dfd80a;
+    box-shadow: 0 0 10px rgba(77, 77, 77, 0.7);
+    transform: scale(1.05);
+  }
+  
+  /* Form Elements */
+  input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00d4ff;
+    background: #2a2a2a;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #00aaff;
+    outline: none;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #00d4ff;
+    color: #1e1e1e;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background: #3a3a3a;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #2a2a2a;
+  }
+  
+  td img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Error and Success Messages */
+  .error-message {
+    color: #ff6f6f;
+    font-size: 1.2rem;
+  }
+  
+  .success-message {
+    color: #66ff66;
+    font-size: 1.2rem;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .admin-container {
+    animation: slideIn 0.6s ease-out;
+  }
+  
+  button, input, textarea {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  h2 {
+    animation: fadeIn 1s ease-in;
+  }
+  

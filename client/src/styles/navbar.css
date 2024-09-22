@@ -1,0 +1,101 @@
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c7530;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+
+.navbar .navbar-brand {
+  font-size: 3.5rem;
+  font-family: 'Times New Roman', Times, serif, cursive;
+  font-style: italic;
+}
+
+
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #FFD700;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #212221;
+    text-align: center;
+  }
+  .navbar {
+    padding: 0 0.5rem; 
+  }
+
+  .navbar .navbar-brand {
+    font-size: 2.8rem; 
+  }
+
+  .navbar .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Smaller font size for links on mobile */
+  }
+
+  .navbar .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .cart-icon .badge {
+    top: -8px;
+    right: -8px;
+    font-size: 0.6rem; /* Smaller badge font size for mobile */
+  }
+}
+
+@media (min-width: 993px) {
+  .navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    margin: 0 1rem;
+  }
+}

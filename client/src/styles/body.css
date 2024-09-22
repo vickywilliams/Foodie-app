@@ -1,0 +1,117 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f7f7f7, #d0e4f3);
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #333;
+    animation: fadeIn 2s ease-out;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-out 1s;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+    animation: zoomEffect 6s ease-in-out infinite;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(300px,7fr));
+        gap: 10px;
+    }
+
+    .gallery-image {
+        height: 150px;
+    }
+}
